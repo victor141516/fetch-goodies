@@ -1,0 +1,29 @@
+{
+  "name": "fetch-goodies",
+  "version": "0.0.1",
+  "description": "A tiny library for fetching with goodies",
+  "author": "Victor Fernandez <victor.fernandez.gabriel@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/victor141516/fetch-goodies",
+  "module": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "devDependencies": {
+    "@swc/cli": "^0.4.0",
+    "@swc/core": "^1.7.4",
+    "@types/bun": "latest",
+    "@vitest/coverage-v8": "^2.0.5",
+    "vitest": "^2.0.5"
+  },
+  "scripts": {
+    "build:compile": "swc src -d dist --strip-leading-paths",
+    "build:types": "tsc --project compile-types.tsconfig.json --outDir dist",
+    "build": "$npm_execpath run build:compile && $npm_execpath run  build:types",
+    "test": "vitest --coverage --run",
+    "test:watch": "vitest --coverage --watch"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
