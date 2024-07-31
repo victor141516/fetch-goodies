@@ -2,6 +2,12 @@
 
 Fetch but with goodies.
 
+## Install
+
+```sh
+npm i fetch-goodies
+```
+
 ## Usage
 
 Basic usage:
