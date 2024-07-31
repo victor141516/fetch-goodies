@@ -1,6 +1,6 @@
 {
   "name": "fetch-goodies",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny library for fetching with goodies",
   "author": "Victor Fernandez <victor.fernandez.gabriel@gmail.com>",
   "license": "MIT",
@@ -25,5 +25,14 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "keywords": [
+    "fetch",
+    "fetch-api",
+    "fetch-wrapper",
+    "fetch-retry",
+    "fetch-json",
+    "fetch-goodies",
+    "typescript"
+  ]
 }
