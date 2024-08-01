@@ -62,23 +62,8 @@ Global retry options:
 const fetchWithGoodies = goodies(fetch, {
   retry: { count: 5 },
   forceParseJson: true,
-  httpCodesConsideredSuccessful: [
-    200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304,
-    305, 306, 307, 308,
-  ],
+  httpCodesConsideredSuccessful: [200, 201],
   urlPrefix: 'https://example.com',
-})
-```
-
-Powerful retry options:
-
-```ts
-fetchWithGoodies('https://example.com', {
-  retry: {
-    count: 5,
-    delay: (attempt) => 2 ** attempt * 1000,
-    on: ({ error }) => error?.message.includes('Ah Shit, Here We Go Again'),
-  },
 })
 ```
 
